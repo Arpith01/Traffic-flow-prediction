@@ -11,7 +11,7 @@ from keras import backend
 from keras.engine.topology import Layer
 import glob
 from st_resnet import *
-from preprocess_data import *
+import preprocess_data
 
 def get_training_data(data, sequence_length, trend_gap, period_gap, closeness_gap):
     
@@ -131,6 +131,6 @@ if __name__ == "__main__":
         data = read_input()
         train(data)
     elif choice == 2:
-        pre
+        preprocess_data.main()
 
 
